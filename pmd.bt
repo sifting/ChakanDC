@@ -1,0 +1,28 @@
+
+LittleEndian();
+
+struct Face
+{
+    uint32 point;
+    float x, y;
+    uint32 flags;
+};
+struct Primitive
+{
+    uint32 unk0;
+    Face faces[4];
+    uint32 unk1;
+};
+struct Point
+{
+    float x,y,z;
+};
+
+uint32 header;
+uint32 nprimitives;
+uint32 npoints;
+uint32 unk;
+
+local uint32 i = nprimitives;
+while (i--) Primitive prim;
+Point points[npoints];

@@ -1,0 +1,17 @@
+LittleEndian();
+
+struct Entry
+{
+    char tag[16];
+    uint32 size;
+    uint32 offset;
+};
+
+uint16 header;
+uint16 count;
+uint32 unk0;
+uint32 unk1;
+uint32 size;
+uint32 unk3;
+
+Entry entry[count];
